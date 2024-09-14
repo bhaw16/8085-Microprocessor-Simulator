@@ -1,0 +1,324 @@
+
+Flag and register status before MVI A,35H:
+
+Accumulator: 00
+BC : [00, 00]
+DE : [00, 00]
+HL : [00, 00]
+
+AC: false CY: false Z: false S: false P: false
+
+Flag and register status after MVI A,35H:
+
+Accumulator: 35
+BC : [00, 00]
+DE : [00, 00]
+HL : [00, 00]
+
+AC: false CY: false Z: false S: false P: false
+
+Flag and register status before LXI H,2030H:
+
+Accumulator: 35
+BC : [00, 00]
+DE : [00, 00]
+HL : [00, 00]
+
+AC: false CY: false Z: false S: false P: false
+
+Flag and register status after LXI H,2030H:
+
+Accumulator: 35
+BC : [00, 00]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: false CY: false Z: false S: false P: false
+
+Flag and register status before MOV B,M:
+
+Accumulator: 35
+BC : [00, 00]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: false CY: false Z: false S: false P: false
+
+Flag and register status after MOV B,M:
+
+Accumulator: 35
+BC : [B4, 00]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: false CY: false Z: false S: false P: false
+
+Flag and register status before ADD B:
+
+Accumulator: 35
+BC : [B4, 00]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: false CY: false Z: false S: false P: false
+
+Flag and register status after ADD B:
+
+Accumulator: E9
+BC : [B4, 00]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: false CY: true Z: false S: true P: false
+
+Flag and register status before ADI E6H:
+
+Accumulator: E9
+BC : [B4, 00]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: false CY: true Z: false S: true P: false
+
+Flag and register status after ADI E6H:
+
+Accumulator: CF
+BC : [B4, 00]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: true CY: true Z: false S: true P: true
+
+Flag and register status before MVI C,9FH:
+
+Accumulator: CF
+BC : [B4, 00]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: true CY: true Z: false S: true P: true
+
+Flag and register status after MVI C,9FH:
+
+Accumulator: CF
+BC : [B4, 9F]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: true CY: true Z: false S: true P: true
+
+Flag and register status before SUB C:
+
+Accumulator: CF
+BC : [B4, 9F]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: true CY: true Z: false S: true P: true
+
+Flag and register status after SUB C:
+
+Accumulator: 30
+BC : [B4, 9F]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: true CY: true Z: false S: false P: true
+
+Flag and register status before SUI 07H:
+
+Accumulator: 30
+BC : [B4, 9F]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: true CY: true Z: false S: false P: true
+
+Flag and register status after SUI 07H:
+
+Accumulator: 29
+BC : [B4, 9F]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: true CY: true Z: false S: false P: false
+
+Flag and register status before INR D:
+
+Accumulator: 29
+BC : [B4, 9F]
+DE : [00, 00]
+HL : [20, 30]
+
+AC: true CY: true Z: false S: false P: false
+
+Flag and register status after INR D:
+
+Accumulator: 29
+BC : [B4, 9F]
+DE : [01, 00]
+HL : [20, 30]
+
+AC: false CY: false Z: false S: false P: false
+
+Flag and register status before INR C:
+
+Accumulator: 29
+BC : [B4, 9F]
+DE : [01, 00]
+HL : [20, 30]
+
+AC: false CY: false Z: false S: false P: false
+
+Flag and register status after INR C:
+
+Accumulator: 29
+BC : [B4, A0]
+DE : [01, 00]
+HL : [20, 30]
+
+AC: true CY: true Z: false S: true P: true
+
+Flag and register status before INR B:
+
+Accumulator: 29
+BC : [B4, A0]
+DE : [01, 00]
+HL : [20, 30]
+
+AC: true CY: true Z: false S: true P: true
+
+Flag and register status after INR B:
+
+Accumulator: 29
+BC : [B5, A0]
+DE : [01, 00]
+HL : [20, 30]
+
+AC: false CY: false Z: false S: true P: false
+
+Flag and register status before INR A:
+
+Accumulator: 29
+BC : [B5, A0]
+DE : [01, 00]
+HL : [20, 30]
+
+AC: false CY: false Z: false S: true P: false
+
+Flag and register status after INR A:
+
+Accumulator: 2A
+BC : [B5, A0]
+DE : [01, 00]
+HL : [20, 30]
+
+AC: false CY: true Z: false S: false P: false
+
+Flag and register status before CMA:
+
+Accumulator: 2A
+BC : [B5, A0]
+DE : [01, 00]
+HL : [20, 30]
+
+AC: false CY: true Z: false S: false P: false
+
+Flag and register status after CMA:
+
+Accumulator: D5
+BC : [B5, A0]
+DE : [01, 00]
+HL : [20, 30]
+
+AC: false CY: true Z: false S: false P: false
+
+Flag and register status before LXI H,10FFH:
+
+Accumulator: D5
+BC : [B5, A0]
+DE : [01, 00]
+HL : [20, 30]
+
+AC: false CY: true Z: false S: false P: false
+
+Flag and register status after LXI H,10FFH:
+
+Accumulator: D5
+BC : [B5, A0]
+DE : [01, 00]
+HL : [10, FF]
+
+AC: false CY: true Z: false S: false P: false
+
+Flag and register status before ADD M:
+
+Accumulator: D5
+BC : [B5, A0]
+DE : [01, 00]
+HL : [10, FF]
+
+AC: false CY: true Z: false S: false P: false
+
+Flag and register status after ADD M:
+
+Accumulator: 9A
+BC : [B5, A0]
+DE : [01, 00]
+HL : [10, FF]
+
+AC: true CY: true Z: false S: true P: true
+
+Flag and register status before LXI H,DF07H:
+
+Accumulator: 9A
+BC : [B5, A0]
+DE : [01, 00]
+HL : [10, FF]
+
+AC: true CY: true Z: false S: true P: true
+
+Flag and register status after LXI H,DF07H:
+
+Accumulator: 9A
+BC : [B5, A0]
+DE : [01, 00]
+HL : [DF, 07]
+
+AC: true CY: true Z: false S: true P: true
+
+Flag and register status before SUB M:
+
+Accumulator: 9A
+BC : [B5, A0]
+DE : [01, 00]
+HL : [DF, 07]
+
+AC: true CY: true Z: false S: true P: true
+
+Flag and register status after SUB M:
+
+Accumulator: 51
+BC : [B5, A0]
+DE : [01, 00]
+HL : [DF, 07]
+
+AC: true CY: true Z: false S: false P: false
+
+Flag and register status before CMA:
+
+Accumulator: 51
+BC : [B5, A0]
+DE : [01, 00]
+HL : [DF, 07]
+
+AC: true CY: true Z: false S: false P: false
+
+Flag and register status after CMA:
+
+Accumulator: AE
+BC : [B5, A0]
+DE : [01, 00]
+HL : [DF, 07]
+
+AC: true CY: true Z: false S: false P: false
