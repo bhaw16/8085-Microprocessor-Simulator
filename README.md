@@ -1,5 +1,5 @@
 # 8085-Microprocessor-Simulator
-# Instructions implemented:
+* Instructions implemented: *
 MOV
 MVI
 LXI H
@@ -9,4 +9,4 @@ SUB
 SUI
 INR
 CMA
-# Main.java
+* Main.java *
