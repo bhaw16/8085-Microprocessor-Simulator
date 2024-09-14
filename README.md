@@ -25,22 +25,12 @@ Takes in a Deque that acts as a Stack (once again this is intended to be the sta
 
 There are 3 Lists used to help with number conversions: a List<Integer> of decimal numbers from 0-15, a List<Integer> of binary numbers from 0-1111 and a List<Character> of hexadecimal numbers from ‘0’-‘F’.
 
-binaryToHex():
+binaryToHex(): From left to right for every 4 binary bits, the value in hex at the index of the binary number (minus the extra 0s) is concatenated to a String; this String is returned. When using this method in InstructionSet, the result of this function is converted to a character array in order to update the registers.
 
-From left to right for every 4 binary bits, the value in hex at the index of the binary number (minus the extra 0s) is concatenated to a String; this String is returned. When using this method in InstructionSet, the result of this function is converted to a character array in order to update the registers.
+hexToBinary(): From left to right, every hexadecimal character is converted to binary by accessing the value in the binary List at the index of the hex character. Before moving on to the next character, the int is converted to a String and padded with 0s until the String’s length becomes 4. A new int array created to store the binary result is created and traversed and the integer value of every character in the final String is assigned to the current index. Then, the int array is returned.
 
-hexToBinary():
+hexToDecimal(): Converts hex to binary and binary to a decimal int.
 
-From left to right, every hexadecimal character is converted to binary by accessing the value in the binary List at the index of the hex character. Before moving on to the next character, the int is converted to a String and padded with 0s until the String’s length becomes 4. A new int array created to store the binary result is created and traversed and the integer value of every character in the final String is assigned to the current index. Then, the int array is returned.
+decimalToHex(): Converts decimal to binary and binary to a hexadecimal String. The returned value is the String converted to a char array.
 
-hexToDecimal():
-
-Converts hex to binary and binary to a decimal int.
-
-decimalToHex():
-
-Converts decimal to binary and binary to a hexadecimal String. The returned value is the String converted to a char array.
-
-getMemoryAddress():
-
-Takes in a hexadecimal memory address and returns the respective indices to use when referencing memory values in the memory array of the InstructionSet class. The first 3 characters are converted to decimal by adding (value in decimal List at index of respective hex character) * 16^(the current character). This is the value of the row index. The value of the column index is the value in the decimal List at the index of the fourth hex character. These two indices are put into an int array and this array is returned.
+getMemoryAddress(): Takes in a hexadecimal memory address and returns the respective indices to use when referencing memory values in the memory array of the InstructionSet class. The first 3 characters are converted to decimal by adding (value in decimal List at index of respective hex character) * 16^(the current character). This is the value of the row index. The value of the column index is the value in the decimal List at the index of the fourth hex character. These two indices are put into an int array and this array is returned.
