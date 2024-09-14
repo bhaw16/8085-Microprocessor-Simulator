@@ -39,12 +39,29 @@ binaryAdd(): Accepts two int arrays each representing an 8-bit binary number. A 
 
 **Instructions implemented:**
 
-* MOV
-* MVI
-* LXI H
-* ADD
-* ADI
-* SUB
-* SUI
-* INR
-* CMA
+* MOV: copies the char array from one register to another.
+* MVI: replaces the char array of the register to the char array representing the hexadecimal number being copied to the register.
+* LXI H: takes in a hexadecimal memory address and changes the char arrays in the HL register pairs to match the hexadecimal memory address.
+* ADD: The flags are reset at the start of this operation. Then, the accumulator content and the register content are converted to binary numbers (both represented by an int array) and added together with the binaryAdd() method. The result is then converted to a hexadecimal number and stored in the accumulator.
+* ADI: The flags are reset at the start of this operation. Then, the accumulator content and the hexadecimal number being added (represented by a char array) are converted to binary numbers (both represented by an int array) and added together with the binaryAdd() method. The result is then converted to a hexadecimal number and stored in the accumulator.
+* SUB: The flags are reset at the start of this operation. Then, 2s complement is performed on the register content and the flags are reset again since binaryAdd() affects the auxiliary carry and carry flags. Then, the accumulator content and the 2s complement of the register content are converted to binary numbers (both represented by an int array) and added together with the binaryAdd() method. The result is then converted to a hexadecimal number and stored in the accumulator.
+* SUI: The flags are reset at the start of this operation. Then, 2s complement is performed on the hexadecimal number being added (char array) and the flags are reset again since binaryAdd() affects the auxiliary carry and carry flags. Then, the accumulator content and the 2s complement of the register content are converted to binary numbers (both represented by an int array) and added together with the binaryAdd() method. The result is then converted to a hexadecimal number and stored in the accumulator.
+* INR: The flags are reset at the start of this operation. Then, the register content is converted to a binary number (represented by an int array) and added with the binary number 00000001 ([0, 0, 0, 0, 0, 0, 0, 1]) with the binaryAdd() method. The result is then converted to a hexadecimal number and stored in the register being incremented.
+* CMA: The accumulator content is converted to binary and then 1s complement is performed on the bits. Then, the result is converted back to hex and stored in the accumulator.
+
+
+**Additional notes:**
+
+I did this project at the end of the Spring 2024 semester for honors credit in my Computer Architecture class which is why some of these notes mention time constraints.
+
+I preferred to use StringBuilder’s append() method rather than using the concatenation operator or concat() method for padding/concatenating Strings because it is better for the runtime of the program and as such is my personal preference.
+
+I implemented the LXI instruction for only the HL register pair because I wanted to be able to use M as a register for the MOV, ADD and SUB instructions at the minimum in spite of time constraints.
+
+I did not implement the INX instruction or any other extended instructions because I preferred to focus on 8-bit instructions rather than 16-bit instructions.
+
+I did not implement LDA, STA, custom Exceptions or Exception handling (aside from throwing IOExceptions to the compiler) due to time constraints.
+
+I did not make the stack pointer a global variable because some Java programmers consider the use of global variables in the Main class to be bad practice, so I had it returned and passed in between methods in order to access and use it in main().
+
+For the instructions that use commas, I made it so that a character has to come right before and right after the comma. If I had more time, I would try to allow spaces as well by using trim().
