@@ -11,6 +11,7 @@
 * CMA
 
 **Main.java**
+
 main():
 Decodes and executes instructions from the stack pointer (represented with a Deque being used as a stack) and prints the register and flag status both before and after the instruction is executed.
 
